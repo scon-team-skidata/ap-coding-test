@@ -1,0 +1,4 @@
+bin/
+shelly-simulator
+*.test
+.codebase-memory/

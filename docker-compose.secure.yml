@@ -1,0 +1,17 @@
+# Optional extension: combine with docker-compose.yml using make up-secure.
+services:
+  simulator:
+    ports:
+      - "127.0.0.1:${SIMULATOR_HTTPS_PORT:-8443}:8443"
+    environment:
+      TLS_ENABLED: "true"
+      AUTH_ENABLED: "true"
+      AUTH_USERNAME: ${SHELLY_USERNAME:-admin}
+      AUTH_PASSWORD: ${SHELLY_PASSWORD:-admin}
+
+  agent:
+    environment:
+      SHELLY_URL: https://simulator:8443
+      SHELLY_USERNAME: ${SHELLY_USERNAME:-admin}
+      SHELLY_PASSWORD: ${SHELLY_PASSWORD:-admin}
+      TLS_INSECURE_SKIP_VERIFY: "true"

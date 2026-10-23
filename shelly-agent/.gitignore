@@ -1,0 +1,14 @@
+# Binaries
+/bin/
+/shelly-agent
+
+# Go build/test artifacts
+*.test
+*.out
+
+# Editors / OS
+.DS_Store
+*.swp
+
+# Local env/secrets
+.env

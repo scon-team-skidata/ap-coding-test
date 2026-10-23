@@ -1,0 +1,106 @@
+#
+# https://editorconfig.org
+#
+# Basically, we have 2 spaces indentation by default.
+# Basically, we have tabs with width 4 for all main source files by default.
+# We stick to standards when they are defined.
+#
+
+# We stop recursive loading in this folder
+root = true
+
+# Global rules
+# Note that we do not set the end_of_line globally, this is handled via gitattributes.
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Doc files
+[*.{md,markdown,adoc,asciidoc,apt,txt}]
+trim_trailing_whitespace = false
+
+# Unix shell files
+[*.{sh,zsh,bash}]
+end_of_line = lf
+
+# Windows batch files
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+
+# Java family
+[*.{java,groovy,gradle,kt}]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = false
+
+# C family
+[*.{cs,c,h,cpp,hpp,cc,hh,c++,h++}]
+indent_style = tab
+indent_size = 4
+
+# Javascript family
+[*.{js,ts,css,less,sass,scss,coffee,mjs}]
+indent_style = tab
+indent_size = 4
+
+# Go
+[*.{go}]
+indent_style = tab
+indent_size = 4
+
+# Make recipes require tabs.
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+# Python standard is 4 spaces indent
+[*.{py,pxd,py3,pyw,pyx,pyz,pyi}]
+indent_style = space
+indent_size = 4
+
+# Ruby standard is 2 spaces indent
+[*.{rb}]
+indent_style = space
+indent_size = 2
+
+# Rust standard is 4 spaces indent
+[*.{rs}]
+indent_style = space
+indent_size = 4
+
+# Protobuf standard is 2 spaces indent
+[*.{proto}]
+indent_style = space
+indent_size = 2
+
+# XML
+#  xjb ... Java
+#  xaml ... .NET
+#  runsettings ... Visual Studio
+#  nuspec, Config ... NuGet
+[*.{xml,xsd,wsdl,xjb,xaml,runsettings,nuspec,Config,xsl}]
+indent_style = tab
+indent_size = 4
+
+# Eclipse XML generated
+[{.project,.classpath,.factorypath,.autotools,.cproject}]
+charset = unset
+end_of_line = unset
+indent_style = unset
+indent_size = unset
+tab_width = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+
+# Visual Studio generated
+[*.{sln,csproj,vssscc,vbproj,vcproj,vcxproj}]
+charset = unset
+end_of_line = unset
+indent_style = unset
+indent_size = unset
+tab_width = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset

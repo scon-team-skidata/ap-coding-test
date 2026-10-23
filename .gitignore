@@ -1,0 +1,78 @@
+# This file is inspired by
+#   https://github.com/github/gitignore/tree/master/Global
+
+# Go build output and local development settings
+**/bin/
+*.test
+*.out
+.env
+.env.local
+**/.codebase-memory/
+*.swp
+
+# Maven
+/target/
+/*/target/
+
+# NodeJS
+# Note that package.json and package-lock.json should be now checked in
+/node_modules/
+/*/node_modules/
+# /package.json
+# /*/package.json
+# /package-lock.json
+# /*/package-lock.json
+
+# Angular
+/.angular/
+/*/.angular/
+/dist/
+/*/dist/
+
+# Eclipse
+.autotools
+.cproject
+.classpath
+.factorypath
+.metadata
+.project
+.settings
+
+# Intellij
+.idea
+*.iws
+*.iml
+
+# Visual Studio Code
+.vscode
+.code-workspace
+.history
+
+# Visual Studio
+*.suo
+*.user
+*.temp
+/.vs/
+/build/
+/bin/
+/obj/
+/Debug/
+/Release/
+/TestResults/
+/Packages/
+
+# Autosave
+*.bak
+~*
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db

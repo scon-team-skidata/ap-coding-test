@@ -1,0 +1,24 @@
+{
+  "device_id": "shellyplug-s-SIM01",
+  "http_port": 8080,
+  "https_port": 8443,
+  "devices": [
+    { "id": "shellyplug-s-SIM01", "http_port": 8080, "https_port": 8443 },
+    { "id": "shellyplug-s-SIM02", "http_port": 8081, "https_port": 8444 }
+  ],
+  "tls": {
+    "enabled": false,
+    "cert_file": "",
+    "key_file": ""
+  },
+  "auth": {
+    "enabled": false,
+    "username": "admin",
+    "password": ""
+  },
+  "mqtt": {
+    "broker": "tcp://localhost:1883",
+    "username": "",
+    "password": ""
+  }
+}

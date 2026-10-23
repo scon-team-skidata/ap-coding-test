@@ -1,0 +1,5 @@
+bin/
+.env
+.codebase-memory/
+*.test
+*.out

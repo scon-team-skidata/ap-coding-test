@@ -1,0 +1,154 @@
+# This file is inspired by
+#   https://git-scm.com/docs/gitattributes
+#   https://github.com/alexkaratarakis/gitattributes
+
+# Defaults
+# We set the default to binary and list all text files explicitly
+# This avoids the unintentional manipulation of unknown binary files
+# Note that binary is just a macro for -diff -merge -text
+* binary
+
+# Java and friends
+*.java          text merge diff=java
+*.gradle        text merge diff=java
+*.gradle.kts    text merge diff=java
+*.groovy        text merge diff
+*.kt            text merge diff
+
+# JavaScript
+*.coffee        text merge diff
+*.css           text merge diff=css
+*.htm           text merge diff=html
+*.html          text merge diff=html
+*.js            text merge diff
+*.less          text merge diff
+*.mjs           text merge diff
+*.sass          text merge diff
+*.scss          text merge diff
+*.ts            text merge diff
+
+# JavaScript Config
+browserlist     text merge diff
+.browserlist    text merge diff
+*.npmignore     text merge diff
+
+# JavaScript Linters
+.csslintrc      text merge diff
+.eslintrc       text merge diff
+.jscsrc         text merge diff
+.jshintrc       text merge diff
+.jshintignore   text merge diff
+.stylelintrc    text merge diff
+
+# SQL
+*.sql           text merge diff
+
+# Go
+*.go            text merge diff=golang
+go.mod          text merge diff
+go.sum          text merge diff
+
+# Build and environment configuration
+Makefile        text merge diff eol=lf
+.env.example    text merge diff eol=lf
+
+# C#, C, C++
+*.c             text merge diff=c
+*.c++           text merge diff=cpp
+*.cc            text merge diff=cpp
+*.cpp           text merge diff=cpp
+*.cs            text merge diff=csharp
+*.h             text merge diff=c
+*.h++           text merge diff=cpp
+*.hh            text merge diff=cpp
+*.hpp           text merge diff=cpp
+
+# XML
+#  xjb ... Java
+#  xaml ... .NET
+#  runsettings ... Visual Studio
+#  nuspec, Config ... NuGet
+*.Config        text merge diff
+*.nuspec        text merge diff
+*.runsettings   text merge diff
+*.wsdl          text merge diff
+*.xaml          text merge diff
+*.xjb           text merge diff
+*.xml           text merge diff
+*.xsd           text merge diff
+
+# Json
+*.json          text merge diff
+*.yaml          text merge diff
+*.yml           text merge diff
+
+# Configs
+*.cli           text merge diff
+*.cfg           text merge diff
+*.conf          text merge diff
+*.config        text merge diff
+*.ini           text merge diff
+*.properties    text merge diff
+*.toml          text merge diff
+
+# Unix shell
+*.sh            text merge diff eol=lf
+
+# Windows shell
+*.cmd           text merge diff eol=crlf
+*.bat           text merge diff eol=crlf
+*.ps1           text merge diff eol=crlf
+
+# Documents
+*.bibtex        text merge diff=bibtex
+*.markdown      text merge diff
+*.md            text merge diff
+*.adoc          text merge diff
+*.asciidoc      text merge diff
+*.apt           text merge diff
+*.textfile      text merge diff
+*.mustache      text merge diff
+*.csv           text merge diff
+*.tab           text merge diff
+*.tex           text merge diff=tex
+*.tsv           text merge diff
+*.txt           text merge diff
+AUTHORS         text merge diff
+CHANGELOG       text merge diff
+CHANGES         text merge diff
+CONTRIBUTING    text merge diff
+COPYING         text merge diff
+copyright       text merge diff
+*COPYRIGHT*     text merge diff
+INSTALL         text merge diff
+license         text merge diff
+LICENSE         text merge diff
+NEWS            text merge diff
+readme          text merge diff
+*README*        text merge diff
+TODO            text merge diff
+
+# Editorconfig
+.editorconfig   text merge diff
+
+# Git
+.gitattributes  text merge diff
+.gitconfig      text merge diff
+.gitignore      text merge diff
+
+# Docker
+**/Dockerfile   text merge diff
+
+# Ruby
+*.rb            text merge diff
+
+# Templates
+*.template      text merge diff
+*.tmpl          text merge diff
+*.tpl           text merge diff
+*.jinia         text merge diff
+*.jinia2        text merge diff
+*.j2            text merge diff
+
+# Simple URL files
+*.url           text merge diff
