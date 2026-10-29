@@ -30,7 +30,6 @@
 # JavaScript Config
 browserlist     text merge diff
 .browserlist    text merge diff
-*.npmignore     text merge diff
 
 # JavaScript Linters
 .csslintrc      text merge diff
@@ -47,10 +46,15 @@ browserlist     text merge diff
 *.go            text merge diff=golang
 go.mod          text merge diff
 go.sum          text merge diff
+go.work         text merge diff
+go.work.sum     text merge diff
 
 # Build and environment configuration
 Makefile        text merge diff eol=lf
+*.mk            text merge diff eol=lf
+*.env           text merge diff
 .env.example    text merge diff eol=lf
+*.example       text merge diff
 
 # C#, C, C++
 *.c             text merge diff=c
@@ -58,6 +62,8 @@ Makefile        text merge diff eol=lf
 *.cc            text merge diff=cpp
 *.cpp           text merge diff=cpp
 *.cs            text merge diff=csharp
+*.csproj        -text merge diff
+*.sln           -text merge diff
 *.h             text merge diff=c
 *.h++           text merge diff=cpp
 *.hh            text merge diff=cpp
@@ -79,20 +85,36 @@ Makefile        text merge diff eol=lf
 
 # Json
 *.json          text merge diff
+*.json5         text merge diff
+*.jsonc         text merge diff
 *.yaml          text merge diff
 *.yml           text merge diff
 
 # Configs
-*.cli           text merge diff
 *.cfg           text merge diff
+*.cli           text merge diff
 *.conf          text merge diff
 *.config        text merge diff
 *.ini           text merge diff
+*.npmignore     text merge diff
 *.properties    text merge diff
 *.toml          text merge diff
+.openapi-generator-ignore text merge diff
 
 # Unix shell
 *.sh            text merge diff eol=lf
+.githooks/*     text merge diff eol=lf
+
+# Linux system files
+*.service       text merge diff eol=lf
+*.timer         text merge diff eol=lf
+**/debian/preinst  text merge diff eol=lf
+**/debian/postinst text merge diff eol=lf
+**/debian/prerm    text merge diff eol=lf
+**/debian/postrm   text merge diff eol=lf
+**/logrotate.d/*   text merge diff eol=lf
+**/sudoers.d/*     text merge diff eol=lf
+motd            text merge diff eol=lf
 
 # Windows shell
 *.cmd           text merge diff eol=crlf
@@ -109,6 +131,7 @@ Makefile        text merge diff eol=lf
 *.textfile      text merge diff
 *.mustache      text merge diff
 *.csv           text merge diff
+*.md5           text merge diff
 *.tab           text merge diff
 *.tex           text merge diff=tex
 *.tsv           text merge diff
@@ -127,6 +150,7 @@ NEWS            text merge diff
 readme          text merge diff
 *README*        text merge diff
 TODO            text merge diff
+*VERSION*       text merge diff
 
 # Editorconfig
 .editorconfig   text merge diff
@@ -137,18 +161,40 @@ TODO            text merge diff
 .gitignore      text merge diff
 
 # Docker
-**/Dockerfile   text merge diff
+Dockerfile      text merge diff
+.dockerignore   text merge diff
 
 # Ruby
 *.rb            text merge diff
+*.rb.template   text merge diff
+
+# Protobuf
+*.proto         text merge diff
+*.proto2        text merge diff
+*.proto3        text merge diff
 
 # Templates
 *.template      text merge diff
 *.tmpl          text merge diff
 *.tpl           text merge diff
-*.jinia         text merge diff
-*.jinia2        text merge diff
+*.jinja         text merge diff
+*.jinja2        text merge diff
 *.j2            text merge diff
 
 # Simple URL files
 *.url           text merge diff
+
+# Python
+*.pxd           text diff=python
+*.py            text diff=python
+*.py3           text diff=python
+*.pyw           text diff=python
+*.pyx           text diff=python
+*.pyz           text diff=python
+*.pyi           text diff=python
+*.lock          text merge diff
+.python-version text merge diff
+.pylintrc       text merge diff
+
+# Jupyter notebook
+*.ipynb         text eol=lf
